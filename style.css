@@ -600,7 +600,9 @@ footer {
     gap: 0.5rem;
   }
   .cart-dropdown {
-    right: -10vh;}
+    right: -5vh;
+    width: 40vh;
+  }
 }
 
 /* FOOTER */
