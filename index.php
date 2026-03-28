@@ -88,7 +88,14 @@ function e(string $value): string
 
           <h2 class="headline-1 section-title">We Offer Top Notch</h2>
 
+<<<<<<< HEAD
           <p class="section-text"></p>
+=======
+          <p class="section-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys
+            standard dummy text ever.
+          </p>
+>>>>>>> ed681df (added data/menu.json which contains all the items and categories details && added ConvertJsonToObject class which used to convert json to object to use in index file and replaced the old html by php and used the loop to show the data from the object we got from the previous class we added !)
 
           <ul class="grid-list">
 
@@ -194,7 +201,11 @@ function e(string $value): string
 
             <!-- Menu Grid -->
             <div class="menu-grid">
+<<<<<<< HEAD
                   <?php foreach (($menu->filters ?? []) as $filter): ?>
+=======
+                <?php foreach (($menu->filters ?? []) as $filter): ?>
+>>>>>>> ed681df (added data/menu.json which contains all the items and categories details && added ConvertJsonToObject class which used to convert json to object to use in index file and replaced the old html by php and used the loop to show the data from the object we got from the previous class we added !)
                   <?php
                     $subcategoryId = (string) ($filter->id ?? '');
                     if ($subcategoryId === '' || $subcategoryId === 'all') {
@@ -210,16 +221,21 @@ function e(string $value): string
                       $imageUrl = (string) ($item->image_url ?? '');
                       $nameAr = (string) (($item->name->ar ?? '') ?? '');
                       $nameEn = (string) (($item->name->en ?? '') ?? '');
+<<<<<<< HEAD
                       $sizes = $item->sizes ?? null;
                       $hasSizes = is_array($sizes) && count($sizes) > 0;
                       $basePrice = (string) ($item->price ?? 0);
                       $defaultSizePrice = $hasSizes ? (string) (($sizes[0]->price ?? null) ?? 0) : $basePrice;
+=======
+                      $priceText = (string) ($item->price ?? 0);
+>>>>>>> ed681df (added data/menu.json which contains all the items and categories details && added ConvertJsonToObject class which used to convert json to object to use in index file and replaced the old html by php and used the loop to show the data from the object we got from the previous class we added !)
                     ?>
                     <div class="menu-item animate-on-scroll" data-category="<?= e($subcategoryId) ?>">
                       <img src="<?= e($imageUrl) ?>" alt="" class="menu-item-img">
                       <div class="menu-item-content">
                         <h3><?= e($nameAr) ?></h3>
                         <h3><?= e($nameEn) ?></h3>
+<<<<<<< HEAD
                         <?php if ($hasSizes): ?>
                           <div class="menu-item-sizes">
                             <select class="size-select" aria-label="Select size">
@@ -244,6 +260,10 @@ function e(string $value): string
                         <?php endif; ?>
                         <div class="menu-item-footer">
                           <span class="price" data-price="<?= e($defaultSizePrice) ?>"> LE  <?= e($defaultSizePrice) ?></span>
+=======
+                        <div class="menu-item-footer">
+                          <span class="price"> LE  <?= e($priceText) ?></span>
+>>>>>>> ed681df (added data/menu.json which contains all the items and categories details && added ConvertJsonToObject class which used to convert json to object to use in index file and replaced the old html by php and used the loop to show the data from the object we got from the previous class we added !)
                           <button class="add-to-cart-btn">+</button>
                         </div>
                       </div>
